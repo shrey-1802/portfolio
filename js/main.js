@@ -131,7 +131,7 @@ const fallbackProjects = [
     description: 'An innovative web app that uses computer vision to turn gestures into digital text. Write notes in thin air using hand movements.',
     tech: ['Python', 'MediaPipe', 'OpenCV'],
     github: 'https://github.com/shrey-1802/airshot',
-    live: 'https://lnkd.in/dpEEcfMh',
+    live: 'https://airshot.vercel.app/',
     icon: '✍️'
   },
   {
