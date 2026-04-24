@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shrey Patel — Freelancer, Frontend Developer, Python Developer & UI/UX Designer." />
+  <title>Shrey Patel | Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Particles Background -->
+  <div id="particles-js" class="particles-container"></div>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Shrey</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <a href="mailto:shreyn18007@gmail.com" class="btn btn-primary nav-cta">Email Me</a>
+
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-greeting reveal-fade">👋 Hello, I'm</div>
+          <h1 class="hero-name reveal-fade" style="transition-delay: 0.1s">
+            <span class="first-name">Shrey</span>
+            <span class="last-name gradient-text">Patel</span>
+          </h1>
+          <div class="hero-role reveal-fade" style="transition-delay: 0.2s">
+            <span class="role-text" id="typewriter"></span><span class="cursor">|</span>
+          </div>
+          <p class="hero-description reveal-fade" style="transition-delay: 0.3s">
+            B.Tech Computer Engineering student passionate about building innovative solutions.
+            Experienced in C, C++, Python, and Web Development.
+          </p>
+          <div class="hero-actions reveal-fade" style="transition-delay: 0.4s">
+            <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+            <a href="mailto:shreyn18007@gmail.com" class="btn btn-outline">Email Me</a>
+          </div>
+          <div class="hero-socials reveal-fade" style="transition-delay: 0.5s">
+            <a href="https://github.com/shrey-1802" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/shrey-patel-86925b361/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:shreyn18007@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="hero-visual reveal-scale">
+          <div class="avatar-container">
+            <div class="avatar-glow"></div>
+            <div class="avatar-inner">
+              <pre class="code-avatar">
+<span class="token-comment">// shrey.js</span>
+<span class="token-keyword">const</span> <span class="token-function">dev</span> = {
+  name: <span class="token-string">'Shrey'</span>,
+  role: <span class="token-string">'Freelancer'</span>,
+  skills: [<span class="token-string">'React'</span>, <span class="token-string">'AI'</span>]
+};</pre>
+            </div>
+            <div class="floating-icon icon-1"><i class="fab fa-react"></i></div>
+            <div class="floating-icon icon-2"><i class="fab fa-python"></i></div>
+            <div class="floating-icon icon-3"><i class="fab fa-js"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-down">
+        <div class="mouse"></div>
+        <span>Scroll Down</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-title-wrap reveal-fade">
+          <span class="section-subtitle">About Me</span>
+          <h2 class="section-title">Who is <span class="gradient-text">Shrey?</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-terminal reveal-left">
+            <div class="terminal-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="terminal-title">shrey.json</span>
+            </div>
+            <div class="terminal-body">
+              <div class="line"><span class="prompt">$</span> cat about.json</div>
+              <div class="json">
+                {
+                  <span class="key">"name"</span>: <span class="val">"Shrey Patel"</span>,
+                  <span class="key">"education"</span>: <span class="val">"B.Tech CSE"</span>,
+                  <span class="key">"skills"</span>: [<span class="val">"Web"</span>, <span class="val">"AI"</span>],
+                  <span class="key">"status"</span>: <span class="val">"Innovating"</span>
+                }
+              </div>
+              <div class="line"><span class="prompt">$</span> <span class="blink">_</span></div>
+            </div>
+          </div>
+          <div class="about-content reveal-right">
+            <p>I am a dedicated Computer Engineering student with a strong drive for technological innovation. My expertise spans from software development to artificial intelligence.</p>
+            <p>Currently focusing on honing my skills in <strong>Software Development</strong> and <strong>AI</strong>. I love solving complex problems with elegant code.</p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-num counter" data-target="5">0</span><span class="stat-plus">+</span>
+                <p>Projects</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num counter" data-target="10">0</span><span class="stat-plus">+</span>
+                <p>Skills</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="section-title-wrap reveal-fade">
+          <span class="section-subtitle">My Arsenal</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal-up">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <h3>Frontend</h3>
+            <div class="skill-list">
+              <span>React</span><span>HTML5</span><span>CSS3</span><span>JS</span>
+            </div>
+          </div>
+          <div class="skill-card reveal-up" style="transition-delay: 0.1s">
+            <div class="skill-icon"><i class="fab fa-python"></i></div>
+            <h3>Backend & AI</h3>
+            <div class="skill-list">
+              <span>Python</span><span>Node.js</span><span>OpenCV</span><span>ML</span>
+            </div>
+          </div>
+          <div class="skill-card reveal-up" style="transition-delay: 0.2s">
+            <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+            <h3>Design</h3>
+            <div class="skill-list">
+              <span>UI/UX</span><span>Figma</span><span>Responsive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section-title-wrap reveal-fade">
+          <span class="section-subtitle">My Work</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+          <!-- Projects will be injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact-card-simple reveal-scale">
+          <div class="contact-header">
+            <span class="section-subtitle">Get In Touch</span>
+            <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+            <p>I'm currently looking for new opportunities. My inbox is always open!</p>
+          </div>
+          <div class="email-box">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:shreyn18007@gmail.com" class="email-link">shreyn18007@gmail.com</a>
+          </div>
+          <div class="contact-social-row">
+            <a href="https://github.com/shrey-1802" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/shrey-patel-86925b361/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2026 Shrey Patel. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/shrey-1802" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/shrey-patel-86925b361/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
