@@ -122,7 +122,7 @@ button { border: none; background: none; font-family: inherit; cursor: pointer; 
   padding: 100px 0;
 }
 
-/* ── Navbar ── */
+/* ── Navbar (IMPROVED) ── */
 .navbar {
   position: fixed;
   top: 0;
@@ -149,6 +149,8 @@ button { border: none; background: none; font-family: inherit; cursor: pointer; 
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 0 2rem;
+  gap: 2rem;
 }
 
 .nav-logo {
@@ -157,6 +159,7 @@ button { border: none; background: none; font-family: inherit; cursor: pointer; 
   font-weight: 700;
   color: var(--text-main);
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .logo-bracket { color: var(--accent-primary); }
@@ -164,7 +167,7 @@ button { border: none; background: none; font-family: inherit; cursor: pointer; 
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   justify-content: center;
   flex: 1;
   list-style: none;
@@ -231,6 +234,7 @@ button { border: none; background: none; font-family: inherit; cursor: pointer; 
 
 .nav-cta {
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .hamburger {
@@ -723,6 +727,11 @@ button { border: none; background: none; font-family: inherit; cursor: pointer; 
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
+  .navbar-inner {
+    gap: 1rem;
+    padding: 0 1.5rem;
+  }
+  
   .nav-links {
     gap: 1.5rem;
   }
@@ -746,6 +755,7 @@ button { border: none; background: none; font-family: inherit; cursor: pointer; 
   .navbar-inner {
     flex-wrap: wrap;
     gap: 0.5rem;
+    padding: 0 1rem;
   }
   
   .nav-logo {
@@ -823,6 +833,10 @@ button { border: none; background: none; font-family: inherit; cursor: pointer; 
   
   .navbar.scrolled {
     height: 60px;
+  }
+  
+  .navbar-inner {
+    padding: 0 1rem;
   }
   
   .nav-logo {
