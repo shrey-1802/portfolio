@@ -2,8 +2,56 @@ import type { LearningItem } from '../types';
 
 export const learningData: LearningItem[] = [
   {
+    id: "suss-singapore-masterclass",
+    title: "Masterclass on Business, Technology and Sustainability",
+    category: "Certification",
+    providerOrEvent: "Singapore University of Social Sciences (SUSS) & Corporate Gurukul",
+    date: "27 – 29 January 2026",
+    description: "Completed an international academic masterclass conducted by SUSS Academy (Singapore University of Social Sciences) in partnership with Corporate Gurukul, focusing on the intersection of emerging digital technologies, sustainable engineering practices, and enterprise business strategy.",
+    status: "Completed",
+    keyTakeaways: [
+      "Sustainable technology frameworks and global digital transformation trends",
+      "Analyzing technological ecosystems from both engineering and executive business standpoints",
+      "Cross-border academic collaboration certified by SUSS Academy Director Assoc. Prof. Guan Chong"
+    ],
+    certificateUrl: "#suss-verified",
+    highlightBadge: "International SUSS Certification"
+  },
+  {
+    id: "finlatics-ml-cert",
+    title: "Machine Learning Program Certification",
+    category: "Certification",
+    providerOrEvent: "Finlatics (AIC-NMIMS Incubation under NITI Aayog)",
+    date: "02 Mar 2026 – 12 May 2026",
+    description: "Comprehensive industry machine learning program covering supervised/unsupervised algorithms, model evaluation metrics, regression/classification pipelines, and scikit-learn engineering.",
+    status: "Completed",
+    keyTakeaways: [
+      "Data pipeline construction and feature transformation in Python",
+      "Model training, cross-validation, and hyperparameter tuning",
+      "Auth Credential ID: DSML-96559998212555dc (Verified via Finlatics)"
+    ],
+    certificateUrl: "https://finlatics.com/credentialscheck",
+    highlightBadge: "Credential: DSML-96559998212555dc"
+  },
+  {
+    id: "finlatics-ds-cert",
+    title: "Data Science with Python Certification",
+    category: "Certification",
+    providerOrEvent: "Finlatics (AIC-NMIMS Incubation under NITI Aayog)",
+    date: "02 Mar 2026 – 12 May 2026",
+    description: "Industry-grade data science program applying exploratory data analysis, statistical methods, and quantitative modeling on complex real-world datasets.",
+    status: "Completed",
+    keyTakeaways: [
+      "Advanced Pandas, NumPy, and statistical hypothesis testing",
+      "Data-driven business decision modeling and insight extraction",
+      "Auth Credential ID: DS-965599db22a6b869 (Verified via Finlatics)"
+    ],
+    certificateUrl: "https://finlatics.com/credentialscheck",
+    highlightBadge: "Credential: DS-965599db22a6b869"
+  },
+  {
     id: "hackathon-exposure-01",
-    title: "Hackathon Innovation & Rapid Prototyping",
+    title: "Hackathon Innovation & Rapid Prototyping Exposure",
     category: "Hackathon",
     providerOrEvent: "Inter-College / National Hackathon Event",
     date: "2026",
@@ -19,7 +67,7 @@ export const learningData: LearningItem[] = [
   },
   {
     id: "hackathon-transitops",
-    title: "Smart Transport & Logistics Operations Challenge",
+    title: "Smart Transport & Logistics Operations Sprint",
     category: "Hackathon",
     providerOrEvent: "TransitOps Development Sprint",
     date: "July 2026",
@@ -61,35 +109,5 @@ export const learningData: LearningItem[] = [
       "Networking protocols (HTTP, TCP/IP, REST semantics)"
     ],
     highlightBadge: "Academic Foundation"
-  },
-  {
-    id: "cert-configurable",
-    title: "[Technical Certification / Course Name - Configurable]",
-    category: "Certification",
-    providerOrEvent: "[Provider e.g., Coursera / freeCodeCamp / NPTEL / AWS]",
-    date: "[Completion Date]",
-    description: "Configurable slot for verified certifications, courses, or technical workshop participation.",
-    status: "Completed",
-    keyTakeaways: [
-      "Specific skills covered in the certification or coursework",
-      "Practical project applications"
-    ],
-    certificateUrl: undefined,
-    highlightBadge: "Ready to Update"
-  },
-  {
-    id: "exploring-next",
-    title: "Computer Vision & Edge Sensor Telemetry",
-    category: "Currently Exploring",
-    providerOrEvent: "Self-Directed R&D",
-    date: "Active",
-    description: "Exploring real-time gesture tracking models with MediaPipe, touchless human-computer interaction, and hardware-to-cloud telemetry bridges for real-world IoT sensors.",
-    status: "Continuous",
-    keyTakeaways: [
-      "Touchless spatial UI and air-writing canvas architectures",
-      "Hardware sensor protocols (MQTT, WebSockets, Serial)",
-      "Distributed microservices and edge computing"
-    ],
-    highlightBadge: "Exploration"
   }
 ];

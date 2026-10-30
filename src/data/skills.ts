@@ -2,6 +2,16 @@ import type { SkillCategory } from '../types';
 
 export const skillsData: SkillCategory[] = [
   {
+    title: "Data Science & Machine Learning",
+    description: "Applied statistical modeling, predictive algorithms, and exploratory data analysis using Python.",
+    skills: [
+      { name: "Python for Data Science", level: "Comfortable", highlight: true, note: "Pandas, NumPy, and statistical computing" },
+      { name: "Machine Learning", level: "Working Knowledge", highlight: true, note: "Supervised algorithms, model evaluation & Scikit-Learn" },
+      { name: "Exploratory Data Analysis (EDA)", level: "Comfortable", highlight: true, note: "Data cleaning, feature extraction, and distributions" },
+      { name: "Statistical Modeling", level: "Working Knowledge", note: "Hypothesis testing and quantitative analytics" }
+    ]
+  },
+  {
     title: "Frontend Engineering",
     description: "Building responsive, accessible interfaces and client-side web applications with modern standards.",
     skills: [

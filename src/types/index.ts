@@ -101,6 +101,11 @@ export interface ExperienceItem {
   skillsGained: string[];
   certificateUrl?: string;
   isConfigurablePlaceholder?: boolean;
+  credentialIds?: { label: string; id: string }[];
+  verificationUrl?: string;
+  recommendationExcerpt?: string;
+  supervisorName?: string;
+  supervisorTitle?: string;
 }
 
 export interface LearningItem {
