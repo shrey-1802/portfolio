@@ -362,23 +362,33 @@ export const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'flex-end' }}>
+            <div style={{ display: 'flex', gap: '0.65rem', justifyContent: 'flex-end', flexWrap: 'wrap' }}>
+              <a
+                href="#experience"
+                onClick={() => setResumeModalOpen(false)}
+                className="btn-secondary"
+                style={{ fontSize: '0.825rem', padding: '0.5rem 0.85rem', textDecoration: 'none' }}
+              >
+                Experience & Credentials
+              </a>
+              <a
+                href="./credentials/finlatics-recommendation-letter.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-ghost"
+                style={{ fontSize: '0.825rem', padding: '0.5rem 0.85rem', textDecoration: 'none' }}
+              >
+                Recommendation Letter
+              </a>
               <a
                 href={portfolioConfig.socials.linkedin}
                 target="_blank"
                 rel="noreferrer"
                 className="btn-primary"
-                style={{ fontSize: '0.85rem', padding: '0.55rem 1rem' }}
+                style={{ fontSize: '0.825rem', padding: '0.5rem 0.95rem' }}
               >
-                Connect on LinkedIn <ArrowUpRight size={14} />
+                LinkedIn <ArrowUpRight size={14} />
               </a>
-              <button
-                onClick={() => setResumeModalOpen(false)}
-                className="btn-secondary"
-                style={{ fontSize: '0.85rem', padding: '0.55rem 1rem' }}
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>

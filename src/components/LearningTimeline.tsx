@@ -153,14 +153,14 @@ export const LearningTimeline: React.FC = () => {
 
               {/* Certificate Action Footer */}
               {item.certificateUrl && (
-                <div style={{ paddingTop: '0.75rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', justifyContent: 'flex-end' }}>
-                  <button
-                    onClick={() => setCertAlert(item.title)}
+                <div style={{ paddingTop: '0.75rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', justifyContent: 'flex-end', gap: '0.5rem' }}>
+                  <a
+                    href="#experience"
                     className="btn-ghost"
-                    style={{ fontSize: '0.78rem', color: 'var(--accent-primary)', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
+                    style={{ fontSize: '0.78rem', color: '#10B981', display: 'inline-flex', alignItems: 'center', gap: '0.35rem', textDecoration: 'none' }}
                   >
-                    <Award size={14} /> Certificate Verification Ready
-                  </button>
+                    <Award size={14} /> View Verified Document in Experience
+                  </a>
                 </div>
               )}
             </div>

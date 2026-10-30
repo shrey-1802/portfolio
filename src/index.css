@@ -332,3 +332,161 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     padding-right: 1rem;
   }
 }
+
+/* ==========================================================================
+   NATURE & ORGANIC EXPERIENCE STYLING (100% NATURAL & AUTHENTIC)
+   Zero artificial gradients, pure botanical & grounded engineering aesthetic
+   ========================================================================== */
+
+:root {
+  --nature-bg-deep: #090E0C;
+  --nature-bg-card: #0F1714;
+  --nature-bg-card-hover: #15221D;
+  --nature-bg-surface: #121C18;
+  --nature-border: rgba(52, 211, 153, 0.16);
+  --nature-border-hover: rgba(52, 211, 153, 0.38);
+  --nature-emerald: #10B981;
+  --nature-sprout: #34D399;
+  --nature-mint: #6EE7B7;
+  --nature-earth-gold: #F59E0B;
+  --nature-text-muted: #83978E;
+  --nature-shadow: 0 10px 30px -5px rgba(5, 20, 14, 0.45);
+}
+
+html.light {
+  --nature-bg-deep: #F3F8F5;
+  --nature-bg-card: #FFFFFF;
+  --nature-bg-card-hover: #F8FCFA;
+  --nature-bg-surface: #EBF4EE;
+  --nature-border: rgba(16, 185, 129, 0.22);
+  --nature-border-hover: rgba(16, 185, 129, 0.5);
+  --nature-emerald: #059669;
+  --nature-sprout: #10B981;
+  --nature-mint: #047857;
+  --nature-earth-gold: #D97706;
+  --nature-text-muted: #4B6358;
+  --nature-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.08);
+}
+
+.nature-experience-section {
+  position: relative;
+  background-color: var(--nature-bg-deep);
+  border-top: 1px solid var(--nature-border);
+  border-bottom: 1px solid var(--nature-border);
+  overflow: hidden;
+}
+
+/* Subtle botanical organic background pattern */
+.nature-organic-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(52, 211, 153, 0.03) 0%, transparent 45%),
+    linear-gradient(to right, rgba(52, 211, 153, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(52, 211, 153, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+}
+
+/* Nature Tree & Timeline Vine */
+.nature-timeline-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.nature-timeline-vine {
+  position: absolute;
+  top: 1.5rem;
+  bottom: 2rem;
+  left: 28px;
+  width: 2px;
+  background: linear-gradient(to bottom, #10B981, #059669, #047857, rgba(5, 150, 105, 0.2));
+  border-radius: 9999px;
+}
+
+@media (max-width: 768px) {
+  .nature-timeline-vine {
+    display: none;
+  }
+}
+
+/* Nature Card */
+.nature-card {
+  position: relative;
+  background: var(--nature-bg-card);
+  border: 1px solid var(--nature-border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--nature-shadow);
+}
+
+.nature-card:hover {
+  border-color: var(--nature-border-hover);
+  background: var(--nature-bg-card-hover);
+  transform: translateY(-2px);
+}
+
+/* Nature Badge */
+.nature-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--nature-sprout);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.nature-badge-amber {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--nature-earth-gold);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+}
+
+/* Document Thumbnail Card */
+.nature-doc-thumb {
+  background: var(--nature-bg-surface);
+  border: 1px solid var(--nature-border);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.nature-doc-thumb:hover {
+  border-color: var(--nature-sprout);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.4);
+}
+
+.nature-doc-thumb img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+  border-bottom: 1px solid var(--nature-border);
+  transition: transform 0.3s ease;
+}
+
+.nature-doc-thumb:hover img {
+  transform: scale(1.02);
+}
+

@@ -87,6 +87,18 @@ export interface SkillCategory {
   }[];
 }
 
+export interface ExperienceDocument {
+  id: string;
+  title: string;
+  category: 'recommendation' | 'certificate' | 'participation';
+  imagePath: string;
+  pdfPath?: string;
+  credentialId?: string;
+  verificationUrl?: string;
+  issueDate?: string;
+  signer?: string;
+}
+
 export interface ExperienceItem {
   id: string;
   company: string;
@@ -106,6 +118,8 @@ export interface ExperienceItem {
   recommendationExcerpt?: string;
   supervisorName?: string;
   supervisorTitle?: string;
+  documents?: ExperienceDocument[];
+  growthFocus?: string;
 }
 
 export interface LearningItem {
