@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="spGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="#0D0E15" stroke="#232738" stroke-width="3"/>
+  <!-- Custom SP monogram -->
+  <path d="M 32 30 C 44 30 48 36 48 42 C 48 48 40 50 34 52 C 28 54 26 57 26 63 C 26 70 34 72 44 72" fill="none" stroke="url(#spGrad)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 56 72 L 56 28 L 70 28 C 78 28 82 34 82 42 C 82 50 77 54 68 54 L 56 54" fill="none" stroke="#F8FAFC" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
