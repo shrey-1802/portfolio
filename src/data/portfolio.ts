@@ -49,9 +49,9 @@ export const portfolioConfig: PersonalBrand = {
     linkedin: "https://www.linkedin.com/in/shrey-patel-86925b361/",
     github: "https://github.com/shrey-1802",
     emailConfig: {
-      address: "shrey.patel@contact.me", // Editable configuration variable
-      isConfigured: false, // Set to true once verified email address is provided by Shrey
-      placeholderNotice: "Email address is configurable. Please update with your preferred contact email or connect via LinkedIn."
+      address: "shreyn18007@gmail.com",
+      isConfigured: true,
+      placeholderNotice: ""
     }
   }
 };

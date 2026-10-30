@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle2, AlertCircle, ArrowUpRight, Copy, Check, MessageSquare } from 'lucide-react';
+import { Mail, Send, CheckCircle2, AlertCircle, ArrowUpRight, Copy, Check, MessageSquare, ExternalLink } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './Icons';
 import confetti from 'canvas-confetti';
 import { portfolioConfig } from '../data/portfolio';
@@ -205,24 +205,38 @@ export const Contact: React.FC = () => {
                       <div style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-primary)' }}>
                         Email Channel
                       </div>
-                      <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)' }}>
+                      <a 
+                        href={`mailto:${portfolioConfig.socials.emailConfig.address}`}
+                        style={{ fontSize: '0.85rem', color: '#10B981', fontFamily: 'var(--font-mono)', textDecoration: 'none', fontWeight: 600 }}
+                      >
                         {portfolioConfig.socials.emailConfig.address}
-                      </div>
+                      </a>
                     </div>
                   </div>
 
-                  <button
-                    onClick={handleCopyEmail}
-                    className="btn-ghost"
-                    style={{ fontSize: '0.75rem', padding: '0.35rem 0.65rem' }}
-                    title="Copy Email Address"
-                  >
-                    {copiedEmail ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} />}
-                  </button>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <a
+                      href={`mailto:${portfolioConfig.socials.emailConfig.address}`}
+                      className="btn-ghost"
+                      style={{ fontSize: '0.75rem', padding: '0.35rem 0.65rem' }}
+                      title="Send email directly"
+                    >
+                      <ExternalLink size={14} />
+                    </a>
+                    <button
+                      onClick={handleCopyEmail}
+                      className="btn-ghost"
+                      style={{ fontSize: '0.75rem', padding: '0.35rem 0.65rem' }}
+                      title="Copy Email Address"
+                    >
+                      {copiedEmail ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} />}
+                    </button>
+                  </div>
                 </div>
 
-                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.5rem', marginTop: '0.5rem' }}>
-                  {portfolioConfig.socials.emailConfig.placeholderNotice}
+                <div style={{ fontSize: '0.75rem', color: '#10B981', fontFamily: 'var(--font-mono)', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.5rem', marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#10B981' }} />
+                  Direct verified inbox active
                 </div>
               </div>
             </div>
