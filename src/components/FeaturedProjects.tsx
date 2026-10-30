@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, ChevronRight } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { projectsData } from '../data/projects';
+import { SpotlightCard } from './SpotlightCard';
 
 export const FeaturedProjects: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState<string>('All');
+
+  const categories = [
+    { label: 'All Architectures', value: 'All', count: projectsData.length },
+    { label: 'Precision Ag AI', value: 'Agriculture', count: 1 },
+    { label: 'Disaster Logistics', value: 'Disaster', count: 1 },
+    { label: 'Fleet Telemetry', value: 'Fleet', count: 1 },
+    { label: 'Computer Vision', value: 'Vision', count: 1 },
+    { label: 'SaaS Platform', value: 'Hostel', count: 1 },
+  ];
+
+  const filteredProjects = activeCategory === 'All'
+    ? projectsData
+    : projectsData.filter(p => 
+        p.category.toLowerCase().includes(activeCategory.toLowerCase()) || 
+        p.name.toLowerCase().includes(activeCategory.toLowerCase()) ||
+        p.shortDescription.toLowerCase().includes(activeCategory.toLowerCase())
+      );
+
   return (
     <section id="projects" className="py-20 md:py-28" style={{ padding: '5.5rem 0', borderTop: '1px solid var(--border-subtle)' }}>
       <div className="container-max">
         {/* Section Header */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '3.5rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1.5rem', marginBottom: '2.5rem' }}>
           <div>
             <div className="badge mb-3" style={{ marginBottom: '0.75rem' }}>
               PRIMARY HIGHLIGHT · 5 DEPLOYED SYSTEMS
@@ -27,18 +47,69 @@ export const FeaturedProjects: React.FC = () => {
           </div>
         </div>
 
+        {/* Interactive Domain Filter Bar */}
+        <div 
+          style={{ 
+            display: 'flex', 
+            flexWrap: 'wrap', 
+            gap: '0.5rem', 
+            marginBottom: '3rem',
+            padding: '0.5rem',
+            background: 'var(--bg-secondary)',
+            borderRadius: '12px',
+            border: '1px solid var(--border-subtle)',
+            width: 'fit-content'
+          }}
+        >
+          {categories.map((cat) => (
+            <button
+              key={cat.value}
+              onClick={() => setActiveCategory(cat.value)}
+              style={{
+                padding: '0.45rem 0.95rem',
+                borderRadius: '8px',
+                fontSize: '0.8rem',
+                fontFamily: 'var(--font-mono)',
+                fontWeight: activeCategory === cat.value ? 700 : 500,
+                background: activeCategory === cat.value ? 'var(--bg-card)' : 'transparent',
+                color: activeCategory === cat.value ? 'var(--text-primary)' : 'var(--text-muted)',
+                border: activeCategory === cat.value ? '1px solid var(--border-hover)' : '1px solid transparent',
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.4rem',
+                transition: 'all 0.2s ease',
+                boxShadow: activeCategory === cat.value ? '0 2px 8px rgba(0,0,0,0.2)' : 'none'
+              }}
+            >
+              <span>{cat.label}</span>
+              <span 
+                style={{ 
+                  fontSize: '0.7rem', 
+                  padding: '1px 5px', 
+                  borderRadius: '10px', 
+                  background: activeCategory === cat.value ? 'rgba(56, 189, 248, 0.2)' : 'rgba(255, 255, 255, 0.05)',
+                  color: activeCategory === cat.value ? '#38BDF8' : 'var(--text-muted)' 
+                }}
+              >
+                {cat.count}
+              </span>
+            </button>
+          ))}
+        </div>
+
         {/* 5 Project Cards Stack */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-          {projectsData.map((project) => (
-            <div
+          {filteredProjects.map((project) => (
+            <SpotlightCard
               key={project.id}
-              className="card-dev"
+              tilt={true}
+              spotlightColor={`${project.accentColor}18`}
               style={{
                 borderRadius: '20px',
                 background: 'var(--bg-card)',
                 border: '1px solid var(--border-subtle)',
-                overflow: 'hidden',
-                transition: 'all 0.3s ease'
+                overflow: 'hidden'
               }}
             >
               <div
@@ -336,7 +407,7 @@ export const FeaturedProjects: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </div>

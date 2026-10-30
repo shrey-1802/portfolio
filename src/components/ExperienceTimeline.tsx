@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { experienceData } from '../data/experience';
 import type { ExperienceDocument } from '../types';
+import { SpotlightCard } from './SpotlightCard';
 
 export const ExperienceTimeline: React.FC = () => {
   // Collect all documents across all experience items for seamless tab switching in modal
@@ -95,8 +96,10 @@ export const ExperienceTimeline: React.FC = () => {
           <div className="nature-timeline-vine" aria-hidden="true" />
 
           {experienceData.map((item, idx) => (
-            <div
+            <SpotlightCard
               key={item.id}
+              tilt={false}
+              spotlightColor="rgba(16, 185, 129, 0.16)"
               className="nature-card"
               style={{
                 marginLeft: '0',
@@ -433,7 +436,7 @@ export const ExperienceTimeline: React.FC = () => {
                   )}
                 </div>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
 

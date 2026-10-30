@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ArrowDown, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { LinkedinIcon } from './Icons';
 import { portfolioConfig } from '../data/portfolio';
+import { NatureCanvas } from './NatureCanvas';
+import { SpotlightCard } from './SpotlightCard';
 
 export const Hero: React.FC = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -47,7 +49,10 @@ export const Hero: React.FC = () => {
         position: 'relative'
       }}
     >
-      <div className="container-max">
+      {/* Living Ambient Nature Particle Canvas */}
+      <NatureCanvas />
+
+      <div className="container-max" style={{ position: 'relative', zIndex: 2 }}>
         <div
           className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
           style={{
@@ -223,8 +228,10 @@ export const Hero: React.FC = () => {
 
           {/* Right Column: Abstract Developer Terminal & System Telemetry Visual */}
           <div style={{ width: '100%' }}>
-            <div
-              className="card-dev terminal-block overflow-hidden"
+            <SpotlightCard
+              tilt={true}
+              spotlightColor="rgba(56, 189, 248, 0.16)"
+              className="terminal-block overflow-hidden"
               style={{
                 background: 'var(--bg-card)',
                 borderRadius: '16px',
@@ -460,7 +467,7 @@ export const Hero: React.FC = () => {
                 <span>UTF-8 · TypeScript 5 · Vite 6</span>
                 <span style={{ color: '#10B981' }}>● G H Patel College of Engineering and Technology</span>
               </div>
-            </div>
+            </SpotlightCard>
           </div>
         </div>
       </div>

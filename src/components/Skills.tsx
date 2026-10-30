@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Code, Server, Database, Wrench, Layers } from 'lucide-react';
 import { skillsData } from '../data/skills';
+import { SpotlightCard } from './SpotlightCard';
 
 export const Skills: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -73,9 +74,10 @@ export const Skills: React.FC = () => {
         {/* Skills Cards Grid */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {filteredCategories.map((group, groupIdx) => (
-            <div
+            <SpotlightCard
               key={groupIdx}
-              className="card-dev"
+              tilt={false}
+              spotlightColor="rgba(52, 211, 153, 0.12)"
               style={{
                 padding: '1.75rem',
                 borderRadius: '16px',
@@ -157,7 +159,7 @@ export const Skills: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
 
